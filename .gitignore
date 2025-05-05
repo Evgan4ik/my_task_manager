@@ -1,0 +1,37 @@
+### Python ###
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+
+### Virtual Environment ###
+.venv/
+venv/
+env/
+
+### Django ###
+*.log
+*.pot
+*.sqlite3
+db.sqlite3
+
+### Environment ###
+.env
+.env.local
+
+### IDE ###
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+### Migrations (раскомментируйте, если не хотите коммитить миграции) ###
+# /migrations/
+# !/migrations/__init__.py
+
+### System ###
+.DS_Store
+Thumbs.db
+Desktop.ini
