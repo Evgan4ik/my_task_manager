@@ -22,6 +22,7 @@ logging.basicConfig(
     ]
 )
 
+# Инициализация логирования
 logger = logging.getLogger(__name__)
 logger.info(">>> Бот запущен")
 
