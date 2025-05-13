@@ -64,12 +64,12 @@
                                 <div class="task-meta mt-4">
                                     <div class="d-flex justify-content-between small">
                                         <div class="text-muted">
-                                            <i class="bi bi-calendar-event"></i>
-                                            {{ task.created_at|date:"d.m.Y H:i" }}
+                                            <i class="bi bi-calendar-event"></i>Дата создания<br>
+                                            {{ task.created_at|date:"d.m.Y" }}
                                         </div>
                                         {% if task.deadline %}
                                             <div class="{% if task.is_overdue %}text-danger{% else %}text-muted{% endif %}">
-                                                <i class="bi bi-calendar-x"></i>
+                                                <i class="bi bi-calendar-x"></i>Дата дедлайна<br>
                                                 {{ task.deadline|date:"d.m.Y" }}
                                                 {% if task.is_overdue %}
                                                     <i class="bi bi-exclamation-triangle"></i>
