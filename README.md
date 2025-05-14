@@ -18,7 +18,7 @@
 git clone https://github.com/Evgan4ik/my_task_manager
 ```
 ```
-cd telegram-task-bot
+cd my_task_manager
 ```
 ### Установите зависимости
 ```
