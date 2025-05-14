@@ -81,7 +81,9 @@ SQLite - база данных
 
 project/
 ├── task_manager/     # Настройки Django проекта
+
 │ ├── init.py
+
 │ ├── settings.py     # Конфигурация приложения
 
 │ ├── urls.py         # Главные URL-маршруты
@@ -91,6 +93,8 @@ project/
 ├── tasks/            # Django-приложение для задач
 
 │ ├── migrations/     # Миграции базы данных
+
+│ ├── templates/      # Шаблоны
 
 │ ├── models.py       # Модель Task (хранение задач)
 
