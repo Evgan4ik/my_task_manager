@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 TELEGRAM_TOKEN=ваш_токен_бота
 ```
-### Создайте и премините миграции
+### Создайте и примените миграции базы данных
 ```
 python manage.py makemigrations
 
