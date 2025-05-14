@@ -16,29 +16,40 @@ Telegram Task Bot
 1. Скачайте код
 
 git clone https://github.com/Evgan4ik/my_task_manager
+
 cd telegram-task-bot
 
 Установите зависимости
+
 pip install -r requirements.txt
 
 Настройте бота
+
 Создайте файл .env в корневой папке проекта:
+
 TELEGRAM_TOKEN=ваш_токен_бота
 
 Создайте и премините миграции
+
 python manage.py makemigrations
+
 python manage.py migrate
 
 Для доступа к админке создайте суперпользоветеля:
+
 python manage.py createsuperuser
 
 
 2. Запуск бота:
+
 python manage.py runbot
 
 Основные команды:
+
 /start	  Начало работы
+
 /tasks	  Список задач
+
 /newtask	Создать новую задачу
 
 Пример работы:
@@ -69,32 +80,60 @@ SQLite - база данных
 4. Архетектура проекта
 
 project/
+
 ├── task_manager/     # Настройки Django проекта
+
 │ ├── init.py
+
 │ ├── settings.py     # Конфигурация приложения
+
 │ ├── urls.py         # Главные URL-маршруты
+
 │
+
 ├── tasks/            # Django-приложение для задач
+
 │ ├── migrations/     # Миграции базы данных
+
 │ ├── models.py       # Модель Task (хранение задач)
+
 │ ├── admin.py        # Настройки админ-панели
+
 │ └── views.py        # Обработчики веб-запросов
+
 │
+
 ├── telegram_bot/     # Логика Telegram-бота
+
 │ ├── handlers/       # Обработчики команд
+
 │ │ ├── base.py       # Стартовые команды (/start)
+
 │ │ └── tasks.py      # Работа с задачами (/newtask)
+
 │ │
+
 │ ├── keyboards/      # Кнопки и меню
+
 │ │ └── builders.py   # Генератор инлайн-клавиатур
+
 │ │
+
 │ └── management/     # Команды Django
+
 │ | └── commands/
+
 │ | └── runbot.py     # Запуск бота через manage.py
+
 │ └── models/         # Методы для работы с Django
+
 │ | └── tasks.py      # Взаимодействие с моделью Task
+
 │
+
 ├── manage.py         # Управление Django-проектом
+
 ├── requirements.txt  # Зависимости проекта
+
 └── .env              # Переменные окружения
 
