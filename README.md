@@ -80,11 +80,8 @@ SQLite - база данных
 4. Архетектура проекта
 
 project/
-
 ├── task_manager/     # Настройки Django проекта
-
 │ ├── init.py
-
 │ ├── settings.py     # Конфигурация приложения
 
 │ ├── urls.py         # Главные URL-маршруты
