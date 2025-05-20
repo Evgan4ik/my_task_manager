@@ -8,8 +8,6 @@ class TaskKeyboards:
     def tasks_list(tasks: list) -> InlineKeyboardBuilder:
         """
         Генерирует клавиатуру со списком задач
-        :param tasks: Список объектов Task
-        :return: Объект InlineKeyboardMarkup
         """
         builder = InlineKeyboardBuilder()
         for task in tasks:
@@ -27,8 +25,6 @@ class TaskKeyboards:
     def task_actions(task_id: int) -> InlineKeyboardBuilder:
         """
         Генерирует клавиатуру действий с конкретной задачей
-        :param task_id: ID задачи в базе данных
-        :return: Объект InlineKeyboardMarkup
         """
         builder = InlineKeyboardBuilder()
         builder.button(text="✏️ Редактировать", callback_data=f"edit_task_{task_id}")
@@ -41,8 +37,6 @@ class TaskKeyboards:
     def edit_fields(task_id: int):
         """
         Клавиатура для выбора поля редактирования задачи
-        :param task_id: ID редактируемой задачи
-        :return: InlineKeyboardMarkup
         """
         builder = InlineKeyboardBuilder()
 
