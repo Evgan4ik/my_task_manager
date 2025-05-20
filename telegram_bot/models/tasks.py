@@ -14,7 +14,6 @@ class AsyncTaskManager:
     def get_all():
         """
         Получение всех задач с сортировкой по дате создания
-        Returns: list[Task] - список объектов Task
         """
         return list(Task.objects.all().order_by('-created_at'))
 
@@ -23,10 +22,7 @@ class AsyncTaskManager:
     def get(**kwargs):
         """
         Получение задачи по параметрам
-        Args:
-            **kwargs: Параметры фильтрации (например: id=1)
-        Returns: Task - объект задачи
-        """
+         """
         return Task.objects.get(**kwargs)
 
     @staticmethod
@@ -34,8 +30,6 @@ class AsyncTaskManager:
     def save(task):
         """
         Сохранение задачи в базе данных
-        Args:
-            task (Task): Объект задачи для сохранения
         """
         task.save()
 
@@ -44,8 +38,6 @@ class AsyncTaskManager:
     def delete(task):
         """
         Удаление задачи из базы данных
-        Args:
-            task (Task): Объект задачи для удаления
         """
         task.delete()
 
@@ -54,8 +46,5 @@ class AsyncTaskManager:
     def create(**kwargs):
         """
         Создание новой задачи
-        Args:
-            **kwargs: Параметры задачи (title, description и т.д.)
-        Returns: Task - созданный объект задачи
         """
         return Task.objects.create(**kwargs)
