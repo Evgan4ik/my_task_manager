@@ -14,7 +14,6 @@ router = Router()
 async def start(message: types.Message):
     """
     Обработчик команды /start
-    :param message: Объект сообщения от пользователя
     """
     try:
         logger.info(f"Пользователь {message.from_user.id} нажал /start")
@@ -26,8 +25,6 @@ async def start(message: types.Message):
 async def cancel_handler(callback: types.CallbackQuery, state: FSMContext):
     """
     Обработчик отмены действий
-    :param callback: Callback запрос
-    :param state: Текущее состояние FSM
     """
     await state.clear()
     await callback.message.edit_text(LEXICON['cancel'])
